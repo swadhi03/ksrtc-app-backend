@@ -10,5 +10,5 @@ const schema = mongoose.Schema(
     }
 )
 
-let usermodel = mongoose.model("buses",schema)
-module.exports={usermodel}
+let busmodel = mongoose.model("buses",schema)
+module.exports={busmodel}

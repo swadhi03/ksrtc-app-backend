@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
-const {usermodel} = require("./models/bus")
+const {busmodel} = require("./models/bus")
 
 
 const app = express()
@@ -14,7 +14,7 @@ mongoose.connect("mongodb+srv://swathi:swathi2609@cluster0.em0miqo.mongodb.net/b
 
 app.post("/signup",(req,res)=>{
     let input=req.body
-    let bus = new usermodel(input)
+    let bus = new busmodel(input)
     bus.save()
     console.log(bus)
     res.json({"status":"success"})
